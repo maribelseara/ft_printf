@@ -1,0 +1,10 @@
+.DS_Store
+*.out
+*.o
+*testeo*
+*prueba*
+.bonus
+/obj/
+./libft/obj/
+*.a
+*.swp

@@ -1,0 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_collect_args.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/05 16:18:47 by mseara            #+#    #+#             */
+/*   Updated: 2022/10/12 12:41:27 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "printf.h"
+
+int	ft_collect_args(char const *str, va_list args)
+{
+	int	len;
+
+	len = 0;
+	if (*str == 'c')
+		len = ft_putchar(va_arg(args, int));
+	if (*str == 's')
+		len = ft_putstr(va_arg(args, char *));
+	if (*str == 'p')
+		len = ft_putstr("0x");
+		len = len + ft_puthex(va_arg(args, int), len);
+	return (len);
+}
