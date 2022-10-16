@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_collect_args.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:18:47 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/12 12:41:27 by marvin           ###   ########.fr       */
+/*   Updated: 2022/10/16 10:21:32 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_collect_args(char const *str, va_list args)
 		len = ft_putstr(va_arg(args, char *));
 	if (*str == 'p')
 		len = ft_putstr("0x");
-		len = len + ft_puthex(va_arg(args, int), len);
+		if (len == -1)
+			return (len);
+		len = len + ft_puthex(va_arg(args, unsigned long long), len);
 	return (len);
 }

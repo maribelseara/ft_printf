@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mseara <mseara@student.42barcelon>         +#+  +:+       +#+        */
+/*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:12:07 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/08 15:03:13 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/14 13:52:00 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ int	ft_putstr(char *str)
 	len = 0;
 	while (*str)
 	{
-		len = len + ft_putchar(*str);
+		if (ft_putchar(*str) == -1)
+			return (-1);
+		len++;
 		str++;
 	}
 	return (len);
