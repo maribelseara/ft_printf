@@ -6,7 +6,7 @@
 /*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:48:04 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/16 10:28:14 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/16 11:21:08 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	ft_printf(char const *str, ...)
 		}
 		str++;
 	}
-	len = len + ft_putchar('\n');
 	va_end(args);
 	return (len);
 }
