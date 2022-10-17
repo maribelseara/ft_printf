@@ -6,7 +6,7 @@
 /*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:18:47 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/17 13:29:49 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/17 14:39:17 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ int	ft_collect_args(char const *str, va_list args)
 		len = ft_putunsign(va_arg(args, unsigned int), len);
 	if (*str == '%')
 	{
-		len = ft_putchar(*str);
-		str++;
+		len = ft_putchar('%');
 	}
 	return (len);
 }

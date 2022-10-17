@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils_num.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mseara <mseara@student.42barcelon>         +#+  +:+       +#+        */
+/*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:03:45 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/17 14:08:16 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/17 14:24:54 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-inti	ft_putnbr(long num, int len)
+int	ft_putnbr(long num, int len)
 {
 	if (num < 0)
 	{
