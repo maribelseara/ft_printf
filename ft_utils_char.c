@@ -6,13 +6,13 @@
 /*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:52:54 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/16 10:56:13 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/17 13:55:10 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(int c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }

@@ -7,7 +7,7 @@ AR = ar src
 OBJ_DIR = ./obj/
 OBJS = $(addprefix $(OBJ_DIR), $(SRC:.c=.o))
 DEPS = $(addsuffix .d, $(basename $(OBJS)))
-SRC = ft_printf.c ft_collect_args.c ft_utils_char.c ft_utils_str.c ft_utils_hex.c
+SRC = ft_printf.c ft_collect_args.c ft_utils_char.c ft_utils_str.c ft_utils_hex.c ft_utils_num.c
 
 $(OBJ_DIR)%.o: %.c Makefile
 	@mkdir -p $(OBJ_DIR)

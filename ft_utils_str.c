@@ -6,11 +6,11 @@
 /*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:12:07 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/14 13:52:00 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/17 11:07:54 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *str)
 {

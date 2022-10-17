@@ -1,36 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utils_hex.c                                     :+:      :+:    :+:   */
+/*   ft_utils_num.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseara <mseara@student.42barcelon>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 14:02:10 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/17 14:02:24 by mseara           ###   ########.fr       */
+/*   Created: 2022/10/17 14:03:45 by mseara            #+#    #+#             */
+/*   Updated: 2022/10/17 14:08:16 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned long long num, int len)
+inti	ft_putnbr(long num, int len)
 {
-	if (num > 16)
+	if (num < 0)
 	{
-		len = ft_puthex(num / 16, len);
+		len = ft_putchar('-');
+		num = num * (-1);
+	}
+	if (num > 10)
+	{
+		len = ft_putnbr(num / 10, len);
 		if (len == -1)
 			return (-1);
 	}
-	if (num % 16 <= 9)
+	if (ft_putchar(num % 10 + '0') == -1)
+		return (-1);
+	len++;
+	return (len);
+}
+
+int	ft_putunsign(unsigned long num, int len)
+{
+	if (num > 10)
 	{
-		if (ft_putchar(num % 16 + '0') == -1)
+		len = ft_putunsign(num / 10, len);
+		if (len == -1)
 			return (-1);
-		len++;
 	}
-	else
-	{
-		if (ft_putchar(num % 16 - 10 + 'a') == -1)
-			return (-1);
-		len++;
-	}
+	if (ft_putchar(num % 10 + '0') == -1)
+		return (-1);
+	len++;
 	return (len);
 }
