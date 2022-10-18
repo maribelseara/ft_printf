@@ -26,7 +26,7 @@ int	ft_printf(char const *str, ...);
 int	ft_collect_args(char const *str, va_list args);
 int	ft_putchar(int c);
 int	ft_putstr(char *str);
-int	ft_puthex(unsigned long long num, int len);
+int	ft_puthex(unsigned long long num, int len, int c);
 int	ft_putnbr(long long int num, int len);
 int	ft_putunsign(unsigned long num, int len);
 

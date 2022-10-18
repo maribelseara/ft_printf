@@ -12,11 +12,17 @@
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned long long num, int len)
+int	ft_puthex(unsigned long long num, int len, int c)
 {
+	char	hex;
+
+	if (c == 'X')
+		hex = 'A';
+	else
+		hex = 'a';
 	if (num >= 16)
 	{
-		len = ft_puthex(num / 16, len);
+		len = ft_puthex(num / 16, len, c);
 		if (len == -1)
 			return (-1);
 	}
@@ -28,7 +34,8 @@ int	ft_puthex(unsigned long long num, int len)
 	}
 	else
 	{
-		if (ft_putchar(num % 16 - 10 + 'a') == -1)
+		if (c == 'X')
+		if (ft_putchar(num % 16 - 10 + 'hex') == -1)
 			return (-1);
 		len++;
 	}

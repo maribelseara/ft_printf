@@ -26,17 +26,15 @@ int	ft_collect_args(char const *str, va_list args)
 		len = ft_putstr("0x");
 		if (len == -1)
 			return (len);
-		len = ft_puthex(va_arg(args, unsigned long long), len);
+		len = ft_puthex(va_arg(args, unsigned long long), len, *str);
 	}
 	if (*str == 'd' || *str == 'i')
 		len = ft_putnbr(va_arg(args, int), len);
 	if (*str == 'u')
 		len = ft_putunsign(va_arg(args, unsigned int), len);
 	if (*str == '%')
-	{
 		len = ft_putchar('%');
-	}
-	if (*str == 'x')
-		len = ft_puthex(va_arg(args, unsigned long long), len);
+	if (*str == 'x' || *str == 'X')
+		len = ft_puthex(va_arg(args, unsigned long long), len, *str);
 	return (len);
 }
