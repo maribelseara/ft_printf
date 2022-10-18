@@ -6,7 +6,7 @@
 /*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:12:07 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/17 11:07:54 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/18 16:18:47 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_putstr(char *str)
 	int	len;
 
 	len = 0;
+	if (!str)
+		return (write(1, "(null)", 6));
 	while (*str)
 	{
 		if (ft_putchar(*str) == -1)

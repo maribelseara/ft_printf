@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mseara <mseara@student.42barcelon>         +#+  +:+       +#+        */
+/*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:02:10 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/17 14:02:24 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/18 16:41:03 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_puthex(unsigned long long num, int len)
 {
-	if (num > 16)
+	if (num >= 16)
 	{
 		len = ft_puthex(num / 16, len);
 		if (len == -1)
