@@ -6,7 +6,7 @@
 /*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:18:47 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/18 16:55:00 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/19 10:48:50 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_collect_args(char const *str, va_list args)
 		len = ft_putstr("0x");
 		if (len == -1)
 			return (len);
-		len = ft_puthex(va_arg(args, unsigned long long), len, *str);
+		len = ft_putptr(va_arg(args, unsigned long long), len);
 	}
 	if (*str == 'd' || *str == 'i')
 		len = ft_putnbr(va_arg(args, int), len);
@@ -35,6 +35,6 @@ int	ft_collect_args(char const *str, va_list args)
 	if (*str == '%')
 		len = ft_putchar('%');
 	if (*str == 'x' || *str == 'X')
-		len = ft_puthex(va_arg(args, unsigned long long), len, *str);
+		len = ft_puthex(va_arg(args, unsigned int), len, *str);
 	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: mseara <mseara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:51:00 by mseara            #+#    #+#             */
-/*   Updated: 2022/10/18 16:58:04 by mseara           ###   ########.fr       */
+/*   Updated: 2022/10/19 10:48:45 by mseara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	ft_printf(char const *str, ...);
 int	ft_collect_args(char const *str, va_list args);
 int	ft_putchar(int c);
 int	ft_putstr(char *str);
-int	ft_puthex(unsigned long long num, int len, int c);
+int	ft_puthex(unsigned int num, int len, int c);
 int	ft_putnbr(long long int num, int len);
 int	ft_putunsign(unsigned long num, int len);
-
+int	ft_putptr(unsigned long long num, int len);
 #endif
