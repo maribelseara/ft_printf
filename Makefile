@@ -20,7 +20,7 @@ $(NAME) : $(OBJS)
 .PHONY : clean fclean re all
 
 clean : 
-	rm -rf $(OBJLIB) $(OBJ_DIR)
+	rm -rf $(OBJ_DIR)
 
 fclean: clean
 	rm -f $(NAME)
