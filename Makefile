@@ -1,7 +1,4 @@
 NAME = libftprintf.a
-LIBFT = libft
-LIBNAME = $(LIBFT)/libft.a
-OBJLIB = $(LIBFT)/obj/
 CFLAGS = -Wall -Werror -Wextra
 AR = ar src
 OBJ_DIR = ./obj/
@@ -16,8 +13,6 @@ $(OBJ_DIR)%.o: %.c Makefile
 all: $(NAME)
 
 $(NAME) : $(OBJS)
-	make -C $(LIBFT)
-	cp $(LIBNAME) $(NAME)
 	$(AR) $(NAME) $(OBJS)
 
 -include $(DEPS)
@@ -28,6 +23,6 @@ clean :
 	rm -rf $(OBJLIB) $(OBJ_DIR)
 
 fclean: clean
-	rm -f $(LIBNAME) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
